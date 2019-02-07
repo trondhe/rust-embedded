@@ -1,0 +1,7 @@
+
+Jlink command:
+    JLinkGDBServer -select USB -device nRF52832_xxAA -endian little -if SWD -speed auto -noir -LocalhostOnly
+
+openocd command:
+    openocd -f interface/jlink.cfg -f target/nrf52.cfg
+    openocd -f board/nordic_nrf52_dk.cfg
