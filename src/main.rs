@@ -1,5 +1,6 @@
 #![no_std]
 #![no_main]
+
 use cortex_m_rt::entry;
 #[allow(unused)]
 use panic_halt;
@@ -7,7 +8,7 @@ use panic_halt;
 
 #[entry]
 fn main() -> ! {
-    loop {
-        continue;
-    }
+    cortex_m::asm::nop(); // To not have main optimize to abort in release mode, remove when you add code
+
+    loop {}
 }
